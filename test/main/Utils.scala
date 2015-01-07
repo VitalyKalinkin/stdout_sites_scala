@@ -15,8 +15,6 @@ object Utils extends UnitSpec {
   }
 
   def stdoutTest(input : String)(expected : String)(testable : (InputStream, PrintStream) => Unit) : Unit = {
-    assertResult(expected + "\n") {
-      test(input + "\n", testable)
-    }
+    test(input + "\n", testable) shouldBe expected + "\n"
   }
 }
