@@ -36,7 +36,7 @@ object A_VasyaAndFootbal {
     //result (team, playerId, time, cardsCount)
     @tailrec def process (l : List[(Int, String, Int, String)], acc : Map[String, (String, Int, Int, Int)] = Map.empty) : Map[String, (String, Int, Int, Int)] = {
       l match {
-        case x :: tail => {
+        case x :: tail =>
           val playerId = x._2 + "_" + x._3
           val cardPoints = x._4 match {
             case "y" => 1
@@ -51,7 +51,6 @@ object A_VasyaAndFootbal {
           } else {
             process(tail, acc + (playerId -> (x._2, x._3, x._1, cardsCount + cardPoints)))
           }
-        }
         case Nil => acc
       }
     }
