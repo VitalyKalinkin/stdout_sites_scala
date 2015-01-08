@@ -16,9 +16,9 @@ object C_Treasure {
     val scanner = new Scanner(in)
     val str = scanner.next()
 
-    def balanceChecker (x: List[Char], level : Int) : List[Int] = {
+    def balanceChecker (x: List[Char], level : Int = 0) : List[Int] = {
       @tailrec
-      def inner (x: List[Char], level : Int, acc : List[Int] = Nil) : List[Int] = {
+      def inner (x: List[Char], level : Int, acc : List[Int]) : List[Int] = {
         x match {
           case '(' :: tail => inner(tail, level + 1, level + 1 :: acc)
           case ')' :: tail => inner(tail, level - 1, level - 1 :: acc)
@@ -29,7 +29,7 @@ object C_Treasure {
       inner(x, level, Nil)
     }
 
-    @tailrec def zeroFixer (l : List[Int], acc: Int, accList : List[Int] = Nil) : List[Int] = {
+    @tailrec def zeroFixer (l : List[Int], acc: Int = 0, accList : List[Int] = Nil) : List[Int] = {
       l match {
         case x :: Nil => (acc + x :: accList).reverse
         case x :: tail => zeroFixer(tail, acc + x - 1, 1 :: accList)
@@ -39,14 +39,14 @@ object C_Treasure {
 
     @tailrec def stringFiller (hashes: List[Int], str: List[Char], acc : List[Char] = Nil) : List[Char] = {
       str match {
-          case '#' :: tail => stringFiller(hashes.tail, tail, (")" * hashes.head).toCharArray.toList ::: acc)
+          case '#' :: tail => stringFiller(hashes.tail, tail, (")" * hashes.head).toList ::: acc)
           case x :: tail => stringFiller(hashes, tail, x :: acc)
           case Nil => acc.reverse
       }
     }
 
-    val chars = str.toCharArray.toList
-    val charRanks = balanceChecker(chars, 0)
+    val chars = str.toList
+    val charRanks = balanceChecker(chars)
 
     val hashRanks = chars.zip(charRanks).filter(_._1 == '#').map(_._2)
     val hashRankDiffButLast = hashRanks.zip(hashRanks.drop(1)).map(x => x._2 - x._1)
@@ -57,8 +57,8 @@ object C_Treasure {
       return
     }
 
-    val hashRankDiffFixed = zeroFixer(hashRankDiffButLast :+ lastItem, 0)
-    val strFilledValidation = balanceChecker(stringFiller(hashRankDiffFixed, chars), 0)
+    val hashRankDiffFixed = zeroFixer(hashRankDiffButLast :+ lastItem)
+    val strFilledValidation = balanceChecker(stringFiller(hashRankDiffFixed, chars))
 
 
     /*println(chars)
