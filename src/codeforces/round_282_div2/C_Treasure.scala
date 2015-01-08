@@ -16,7 +16,7 @@ object C_Treasure {
     val scanner = new Scanner(in)
     val str = scanner.next()
 
-    def balanceChecker (x: List[Char], level : Int = 0) : List[Int] = {
+    def balanceChecker (x: List[Char], level : Int = 0) = {
       @tailrec
       def inner (x: List[Char], level : Int, acc : List[Int]) : List[Int] = {
         x match {
@@ -51,11 +51,6 @@ object C_Treasure {
     val hashRanks = chars.zip(charRanks).filter(_._1 == '#').map(_._2)
     val hashRankDiffButLast = hashRanks.zip(hashRanks.drop(1)).map(x => x._2 - x._1)
     val lastItem = charRanks.last - hashRankDiffButLast.sum
-
-    if (hashRanks.last < charRanks.last) {
-      out.println(-1)
-      return
-    }
 
     val hashRankDiffFixed = zeroFixer(hashRankDiffButLast :+ lastItem)
     val strFilledValidation = balanceChecker(stringFiller(hashRankDiffFixed, chars))
