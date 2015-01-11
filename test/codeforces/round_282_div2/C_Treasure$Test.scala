@@ -1,12 +1,12 @@
 package codeforces.round_282_div2
 
-import main.{Utils, UnitSpec}
+import main.{StdoutTester, UnitSpec}
 
 class C_Treasure$Test extends UnitSpec {
   val testable = C_Treasure.parseSolveAndPrint _
 
   "test_1" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "(((#)((#)"
     } {
       "1\n2"
@@ -16,7 +16,7 @@ class C_Treasure$Test extends UnitSpec {
   }
 
   "test_2" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "()((#((#(#()"
     } {
       "1\n1\n3"
@@ -26,7 +26,7 @@ class C_Treasure$Test extends UnitSpec {
   }
 
   "test_3" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "#"
     } {
       "-1"
@@ -36,7 +36,7 @@ class C_Treasure$Test extends UnitSpec {
   }
 
   "test_4" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "(#)"
     } {
       "-1"
@@ -46,7 +46,7 @@ class C_Treasure$Test extends UnitSpec {
   }
 
   "test_5" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "((#(()#(##"
     } {
       "1\n1\n1\n1"
@@ -56,7 +56,7 @@ class C_Treasure$Test extends UnitSpec {
   }
 
   "test_6" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "##((((((()"
     } {
       "-1"
@@ -66,7 +66,7 @@ class C_Treasure$Test extends UnitSpec {
   }
 
   "test_7" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "(((((((((((((((((((###################"
     } {
       "1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1"
@@ -76,7 +76,7 @@ class C_Treasure$Test extends UnitSpec {
   }
 
   "test_8" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "((#)("
     } {
       "-1"
@@ -86,7 +86,7 @@ class C_Treasure$Test extends UnitSpec {
   }
 
   "test_9" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "((#)(((()"
     } {
       "-1"
@@ -96,7 +96,7 @@ class C_Treasure$Test extends UnitSpec {
   }
 
   "test_10" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "()#(#())()()#)(#)()##)#((()#)((#)()#())((#((((((((#)()()(()()(((((#)#(#((((#((##()(##(((#(()(#((#))#"
     } {
       "-1"
@@ -106,7 +106,7 @@ class C_Treasure$Test extends UnitSpec {
   }
 
   "test_11" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)#(((((#)"
     } {
       "1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n1\n130"

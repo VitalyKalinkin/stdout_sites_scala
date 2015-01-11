@@ -1,13 +1,13 @@
 package codeforces.round_282_div2
 
-import main.{UnitSpec, Utils}
+import main.{UnitSpec, StdoutTester}
 
 class A_DigitalCounter$Test extends UnitSpec {
 
   val testable = A_DigitalCounter.parseSolveAndPrint _
 
   "test_1" should "print correct output on test" in {
-    Utils.stdoutTest{
+    StdoutTester{
       "11"
     } {
       "49"
@@ -15,7 +15,7 @@ class A_DigitalCounter$Test extends UnitSpec {
   }
 
   "test_2" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "89"
     } {
       "2"
@@ -23,7 +23,7 @@ class A_DigitalCounter$Test extends UnitSpec {
   }
 
   "test_3" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "00"
     } {
       "4"
@@ -31,7 +31,7 @@ class A_DigitalCounter$Test extends UnitSpec {
   }
 
   "test_4" should "print correct output on test" in {
-    Utils.stdoutTest {
+    StdoutTester {
       "73"
     } {
       "15"
