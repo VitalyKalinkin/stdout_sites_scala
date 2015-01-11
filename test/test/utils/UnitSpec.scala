@@ -1,4 +1,4 @@
-package main
+package test.utils
 
 import org.scalatest._
 

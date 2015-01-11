@@ -1,6 +1,6 @@
-package main
+package test.utils
 
-import java.io.{ByteArrayOutputStream, PrintStream, InputStream, ByteArrayInputStream}
+import java.io.{ByteArrayInputStream, ByteArrayOutputStream, InputStream, PrintStream}
 import java.nio.charset.Charset
 
 object StdoutTester extends UnitSpec {

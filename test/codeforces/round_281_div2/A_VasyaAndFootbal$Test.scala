@@ -1,6 +1,6 @@
 package codeforces.round_281_div2
 
-import main.{StdoutTester, UnitSpec}
+import test.utils.{StdoutTester, UnitSpec}
 
 class A_VasyaAndFootbal$Test extends UnitSpec {
 

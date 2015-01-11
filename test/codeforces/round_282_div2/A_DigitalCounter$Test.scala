@@ -1,6 +1,6 @@
 package codeforces.round_282_div2
 
-import main.{UnitSpec, StdoutTester}
+import test.utils.{StdoutTester, UnitSpec}
 
 class A_DigitalCounter$Test extends UnitSpec {
 

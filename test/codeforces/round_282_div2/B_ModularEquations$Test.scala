@@ -1,6 +1,6 @@
 package codeforces.round_282_div2
 
-import main.{StdoutTester, UnitSpec}
+import test.utils.{StdoutTester, UnitSpec}
 
 class B_ModularEquations$Test extends UnitSpec {
   val testable = B_ModularEquations.parseSolveAndPrint _

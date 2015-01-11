@@ -1,6 +1,6 @@
 package codeforces.round_282_div2
 
-import main.{StdoutTester, UnitSpec}
+import test.utils.{StdoutTester, UnitSpec}
 
 class C_Treasure$Test extends UnitSpec {
   val testable = C_Treasure.parseSolveAndPrint _
