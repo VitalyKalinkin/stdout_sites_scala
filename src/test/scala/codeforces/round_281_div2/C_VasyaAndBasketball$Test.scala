@@ -20,4 +20,12 @@ class C_VasyaAndBasketball$Test extends UnitSpec {
         "15:10"
       } { testable }
   }
+
+  "test_3" should "print correct output on test" in {
+      StdoutTester {
+          "8\n1 3 5 7 9 11 13 15\n8\n2 4 6 8 10 12 14 16"
+      } {
+          "24:24"
+      } { testable }
+  }
 }
