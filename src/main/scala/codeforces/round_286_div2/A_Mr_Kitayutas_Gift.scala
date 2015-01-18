@@ -14,10 +14,10 @@ object A_Mr_Kitayutas_Gift {
     val scanner = new Scanner(in)
     val str = scanner.next()
 
-    def findInsertionPoints(str : String, l : Int, h: Int, acc : Seq[(Int, Char)] = Nil) : Seq[(Int, Char)] = {
-      (l, h) match {
+    def findInsertionPoints(str : String, lo : Int, hi: Int, acc : Seq[(Int, Char)] = Nil) : Seq[(Int, Char)] = {
+      (lo, hi) match {
         case (l, h) if l > h => acc
-        case (l, h) => {
+        case (l, h) =>
           if (str.charAt(l) == str.charAt(h))
             findInsertionPoints(str, l + 1, h - 1, acc)
           else {
@@ -29,7 +29,6 @@ object A_Mr_Kitayutas_Gift {
             else
               hiResult
           }
-        }
       }
     }
 
